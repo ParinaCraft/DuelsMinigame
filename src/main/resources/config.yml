@@ -1,0 +1,9 @@
+game:
+    concurrent-game-limit: 5
+
+minigame:
+    gametype: 2
+    team-size: 1
+    dueltype: classic
+    max-game-time: 300
+    maps:

@@ -1,0 +1,8 @@
+name: DuelsMinigame
+version: 1.0
+description: Lets see who is better at block game! Gotta sweat so hard rn!
+author: isokissa3
+website: https://joniaromaa.fi
+
+main: fi.joniaromaa.duelsminigame.DuelsPlugin
+depend: [MinigameFramework]
