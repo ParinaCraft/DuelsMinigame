@@ -159,6 +159,8 @@ public class SkywarsDuelType implements IDuelType
 			bukkitPlayer.closeInventory();
 			bukkitPlayer.teleport(spawnLocation);
 			bukkitPlayer.setGameMode(GameMode.ADVENTURE);
+			bukkitPlayer.getInventory().clear();
+			bukkitPlayer.getInventory().setArmorContents(null);
 			
 			bukkitPlayer.setFallDistance(0);
 		}
