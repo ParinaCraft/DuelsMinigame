@@ -74,7 +74,7 @@ public class SkywarsDuelType implements IDuelType
 	@Override
 	public void preGameSpawn(BukkitUser user)
 	{
-		UserStartLocationDataStorage startLocation = user.getUser().getDataStorage(UserStartLocationDataStorage.class);
+		UserStartLocationDataStorage startLocation = user.getUser().getDataStorage(UserStartLocationDataStorage.class).orElse(null);
 		if (startLocation != null)
 		{
 			this.makeSkywarsBox(startLocation.getLocation(), Material.STAINED_GLASS);
@@ -84,7 +84,7 @@ public class SkywarsDuelType implements IDuelType
 	@Override
 	public void preGameLeave(BukkitUser user)
 	{
-		UserStartLocationDataStorage startLocation = user.getUser().getDataStorage(UserStartLocationDataStorage.class);
+		UserStartLocationDataStorage startLocation = user.getUser().getDataStorage(UserStartLocationDataStorage.class).orElse(null);
 		if (startLocation != null)
 		{
 			this.makeSkywarsBox(startLocation.getLocation(), Material.AIR);

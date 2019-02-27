@@ -182,7 +182,7 @@ public class DuelsPreMinigame extends AbstractPreMinigame
 	{
 		BukkitUser user = this.getPlayer(player);
 		
-		UserStartLocationDataStorage startLocation = user.getUser().removeDataStorage(UserStartLocationDataStorage.class);
+		UserStartLocationDataStorage startLocation = user.getUser().removeDataStorage(UserStartLocationDataStorage.class).orElse(null);
 		if (startLocation != null)
 		{
 			this.spawnLocations.put(startLocation.getLocation(), this.spawnLocations.get(startLocation.getLocation()) - 1);

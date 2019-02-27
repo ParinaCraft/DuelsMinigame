@@ -89,7 +89,7 @@ public class DuelsMinigame extends AbstractMinigame<DuelsMinigameTeam, DuelsMini
 		Map<Location, List<BukkitUser>> usersBySpawnLocation = new HashMap<>();
 		for(BukkitUser user : users)
 		{
-			usersBySpawnLocation.computeIfAbsent(user.getUser().getDataStorage(UserStartLocationDataStorage.class).getLocation(), (k) -> new ArrayList<>()).add(user);
+			usersBySpawnLocation.computeIfAbsent(user.getUser().getDataStorage(UserStartLocationDataStorage.class).get().getLocation(), (k) -> new ArrayList<>()).add(user);
 		}
 
 		if (usersBySpawnLocation.size() > 2)
@@ -365,7 +365,7 @@ public class DuelsMinigame extends AbstractMinigame<DuelsMinigameTeam, DuelsMini
 			if (this.timeLeft == 100)
 			{
 				this.sendTitle(Title.builder()
-						.title(ChatColor.RED + "Peli päättyi")
+						.title(ChatColor.RED + "Peli pï¿½ï¿½ttyi")
 						.build());
 			}
 			else if (this.timeLeft == 0)
